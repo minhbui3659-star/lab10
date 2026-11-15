@@ -3,7 +3,6 @@
 Ứng dụng console mô phỏng nhà thông minh, sử dụng .NET 10.
 
 ## Cấu trúc thư mục
-
 ```text
 Config/                 # HomeConfiguration
 Devices/                # IDevice, ILockable, SmartLight, SmartFan, SmartDoor
