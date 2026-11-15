@@ -1,0 +1,37 @@
+@startuml
+interface IDevice {
+  +TurnOn()
+  +TurnOff()
+}
+interface ILockable {
+  +Lock()
+  +Unlock()
+}
+class SmartLight
+class SmartFan
+class SmartDoor
+class DeviceFactory <<static>> {
+  +Create(type, name) : IDevice
+}
+class HomeConfiguration <<singleton>> {
+  +HomeName : string
+  +NightLightLevel : int
+  +Instance : HomeConfiguration
+  -HomeConfiguration()
+}
+class SmartHomeFacade {
+  +GoToWork()
+  +GoToSleep()
+}
+IDevice <|.. SmartLight
+IDevice <|.. SmartFan
+IDevice <|.. SmartDoor
+ILockable <|.. SmartDoor
+DeviceFactory ..> IDevice : creates
+DeviceFactory ..> SmartLight
+DeviceFactory ..> SmartFan
+DeviceFactory ..> SmartDoor
+SmartHomeFacade o--> IDevice : light, fan
+SmartHomeFacade o--> ILockable : door
+SmartHomeFacade ..> HomeConfiguration : reads level
+@enduml
