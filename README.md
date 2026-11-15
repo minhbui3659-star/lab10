@@ -3,6 +3,7 @@
 Ứng dụng console mô phỏng nhà thông minh, sử dụng .NET 10.
 
 ## Cấu trúc thư mục
+
 ```text
 Config/                 # HomeConfiguration
 Devices/                # IDevice, ILockable, SmartLight, SmartFan, SmartDoor
@@ -11,6 +12,7 @@ Factory/                # DeviceFactory
 Program.cs              # Điểm khởi chạy và các tình huống T1–T5
 diagram.puml            # Sơ đồ lớp PlantUML
 SmartHomeMini.csproj
+```
 
 ### 1. Factory đang che giấu quyết định thiết kế nào?
 
