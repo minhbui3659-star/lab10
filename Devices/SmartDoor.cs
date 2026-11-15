@@ -1,3 +1,7 @@
+/****************/
+// 202418944
+// Bùi Nhật Minh
+/****************/
 public class SmartDoor : IDevice, ILockable
 {
     private string name;

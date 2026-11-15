@@ -1,3 +1,7 @@
+/****************/
+// 202418944
+// Bùi Nhật Minh
+/****************/
 public class SmartFan : IDevice
 {
     private string name;

@@ -1,9 +1,12 @@
+/****************/
+// 202418944
+// Bùi Nhật Minh
+/****************/
 public static class DeviceFactory
 {
     public static IDevice Create(string type, string name)
     {
-        // TODO: chua xu ly khoang trang thua o dau/cuoi chuoi
-        switch (type.ToLower())
+        switch (type.Trim().ToLowerInvariant())
         {
             case "light": return new SmartLight(name);
             case "fan": return new SmartFan(name);

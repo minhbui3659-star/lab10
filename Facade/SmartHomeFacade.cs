@@ -1,3 +1,7 @@
+/****************/
+// 202418944
+// Bùi Nhật Minh
+/****************/
 public sealed class SmartHomeFacade
 {
     private IDevice light;
@@ -21,7 +25,7 @@ public sealed class SmartHomeFacade
     public void GoToSleep()
     {
         fan.TurnOff();
-        // TODO: chua khoa cua
+        door.Lock();
         light.TurnOn();
         int level = HomeConfiguration.Instance.NightLightLevel;
         Console.WriteLine("Night light level: " + level + "%");

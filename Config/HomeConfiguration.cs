@@ -1,3 +1,7 @@
+/****************/
+// 202418944
+// Bùi Nhật Minh
+/****************/
 public sealed class HomeConfiguration
 {
     private static readonly Lazy<HomeConfiguration> lazy =
